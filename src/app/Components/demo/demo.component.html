@@ -1,0 +1,32 @@
+<body style="padding-left: 20px">
+<h1>Angular</h1>
+<h3>{{ title }}</h3>
+
+<div>
+  <button (click)="onClick()" class="btn btn-warning">Button</button>
+</div>
+<div *ngIf="magic">
+  <p>Event binding</p>
+</div>
+<h4>
+  Property Binding
+  <button type="button" [disabled]="isUnchanged" class="btn btn-secondary">Disabled Button</button>
+</h4>
+<input type="text" [(ngModel)]="twoWayBind" />
+<p style="background-color: chartreuse; width: 200px;">{{ twoWayBind }}</p>
+
+  <table class="table table-striped" style="width: 200px">
+    <thead>
+        <tr>
+            <th> ID </th>
+            <th> Name </th>
+        </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let user of userList">
+      <td>{{ user.id | currency}}</td>
+      <td>{{ user.name | uppercase }}</td>
+    </tr>
+    </tbody>
+  </table>
+</body>

@@ -1,0 +1,27 @@
+<app-users (add)="display($event)"></app-users>
+
+<!DOCTYPE html>
+<head>
+    <title>Home</title>
+</head>
+<body>
+    <table class="table table-dark" style="width: 1000px">
+        <thead >
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Zip</th>
+            </tr>
+        </thead>
+        <tbody >
+            <tr *ngFor="let user of userList">
+                <td>{{user.name}}</td>
+                <td>{{user.email}}</td>
+                <td>{{user.phone}}</td>
+                <td>{{user.zip}}</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
